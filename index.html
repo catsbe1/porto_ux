@@ -2,211 +2,322 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Porto UX</title>
-  </head>
-  <body>
-    <header class="hero">
-      <!-- LEFT SIDE: Full-bleed image -->
-      <div class="hero-image">
-        <img src="./images/hero.png" alt="Hero Background" />
-      </div>
 
-      <!-- RIGHT SIDE: Text content -->
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>
-            Human-centred<br />
-            Business-minded<br />
-            Community-powered
-          </h1>
-          <p>
-            Porto UX is an open, inclusive community born in Porto but open to
-            everyone, everywhere. We bring together people who care about UX,
-            AX, Interaction and UI Design.
-          </p>
-          <p>
-            We're here to connect, teach and grow together. By sharing knowledge
-            on methods, tools and best practices, we aim to help participants
-            create real value in their careers and projects, for users and for
-            the business.
-          </p>
-          <p>
-            Our goal is to inspire people to build digital products with users
-            in mind, always focused on making a positive impact.
-          </p>
-          <div class="hero-buttons">
-            <a href="#services" class="btn primary">Services →</a>
-            <a href="#learning" class="btn secondary">Learning ↓</a>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 (CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom CSS (optional, to tweak colors/spacing/typography) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container-fluid">
+        <!-- Logo / Brand -->
+        <a class="navbar-brand" href="#">Porto UX</a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#learning">Learning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#workshops">Workshops</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="container-fluid px-0">
+      <div class="row g-0 min-vh-100">
+        <!-- Image -->
+        <div class="col-12 col-lg-6">
+          <img
+            src="./images/hero.png"
+            alt="Hero"
+            class="img-fluid w-100 h-100 object-fit-cover"
+          />
+        </div>
+
+        <!-- Text -->
+        <div class="col-12 col-lg-6 d-flex align-items-center border-bottom">
+          <div
+            class="p-4 p-xl-5 w-100"
+            style="max-width: 720px; margin-inline: auto"
+          >
+            <img
+              src="./images/PortoUX_logo.svg"
+              alt="Porto UX"
+              width="200"
+              class="mb-4"
+            />
+            <h1 class="display-5 fw-semibold mb-4">
+              Human-centred<br />Business-minded<br />Community-powered
+            </h1>
+
+            <p class="text-justify mb-3">
+              Porto UX is an open, inclusive community born in Porto but open to
+              everyone, everywhere. We bring together people who care about UX,
+              AX, Interaction and UI Design.
+            </p>
+            <p class="text-justify mb-3">
+              We’re here to connect, teach and grow together. By sharing
+              knowledge on methods, tools and best practices, we aim to help
+              participants create real value in their careers and projects, for
+              users and for the business.
+            </p>
+            <p class="text-justify mb-4">
+              Our goal is to inspire people to build digital products with users
+              in mind, always focused on making a positive impact.
+            </p>
+
+            <div class="d-flex gap-3 flex-wrap mt-5">
+              <a href="#services" class="btn btn-primary rounded-pill px-4 py-2"
+                >Services</a
+              >
+              <a
+                href="#learning"
+                class="btn btn-secondary rounded-pill px-4 py-2"
+                >Learning</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="mission">
+
+    <!-- MISSION -->
+    <section class="py-5 py-xl-6 mt-4 mb-4">
       <div class="container">
-        <h2>Designing with purpose,<br />growing with community</h2>
-        <p>
-          Since 2016, we’ve been bringing people together to share ideas,
-          stories, and inspiration, from hands-on professionals to curious
-          newcomers.
-        </p>
-        <p>
-          We believe in people. We believe good design makes a difference; for
-          users and for business. <br />
-          By sharing tools, methods and best practices, we help create better
-          products and real impact.
-        </p>
-      </div>
-    </section>
-    <section class="stats">
-      <div class="stat">
-        <h3>30 +</h3>
-        <h4>Events</h4>
-        <p>Including talks, round tables and a full weekend Designathon</p>
-      </div>
-      <div class="stat">
-        <h3>750 +</h3>
-        <h4>Participants</h4>
-        <p>
-          A growing community of Designers, PMs, POs and curious minds from all
-          backgrounds
-        </p>
-      </div>
-      <div class="stat">
-        <h3>50h +</h3>
-        <h4>Networking</h4>
-        <p>
-          Bringing people together to learn, share and build meaningful
-          connections
-        </p>
-      </div>
-    </section>
-    <section id=services class="service">
-      <div class="service-content">
-        <small>Services</small>
-        <h2>UX Audit &<br />Light Consulting</h2>
-        <p class="tagline"><em>Quick insights. Real impact.</em></p>
-        <p>
-          <strong
-            >A streamlined service for startups and product teams who want to
-            level up their user experience.</strong
-          >
-        </p>
-        <p>
-          We’ll review your product using proven UX heuristics, highlight key
-          opportunities for improvement, and deliver clear, visual feedback. No
-          long-term commitment, just actionable insights you can use right away.
-        </p>
-        <p>
-          <strong>What’s included:</strong><br />
-          – Heuristic review of your product<br />
-          – Visual report (Figma, PDF or Notion)<br />
-          – 1-hour feedback session with your team
-        </p>
-        <p>
-          Ideal for early-stage products, MVPs, or teams without a dedicated UX
-          role.
-        </p>
-        <a href="#" class="btn primary">Let’s Talk →</a>
-      </div>
-      <div class="service-image">
-        <img src="./images/service.png" alt="Service visual" />
-      </div>
-    </section>
-    <section class="grow">
-      <div class="grow-content">
-        <h2>Grow with us</h2>
-        <p>
-          <strong>Workshops</strong> and
-          <strong>training sessions</strong> outside working hours, designed to
-          help you grow your skills, confidence and impact, whether you’re just
-          starting out or levelling up.
-        </p>
-        <p>
-          We focus on practical tools, real-world challenges, and collaborative
-          learning. From research and writing to accessibility and AI, we cover
-          what matters in today’s UX practice.
-        </p>
-        <p>
-          Come learn with us, and bring that value back to your team, your
-          users, and your projects.
-        </p>
-      </div>
-    </section>
-    <section id="learning" class="trainings">
-      <div class="training-card">
-        <div class="training-header">
-          <p class="training-date">Online Training<br />(Date)</p>
-          <h3>AI in UX Design</h3>
+        <div class="mx-auto text-center" style="max-width: 760px">
+          <h2 class="fw-semibold mb-4">
+            Designing with purpose,<br />growing with community
+          </h2>
+          <p class="text-justify mb-3">
+            Since 2016, we’ve been bringing people together to share ideas,
+            stories, and inspiration, from hands-on professionals to curious
+            newcomers.
+          </p>
+          <p class="text-justify">
+            We believe in people. We believe good design makes a difference; for
+            users and for business. By sharing tools, methods and best
+            practices, we help create better products and real impact.
+          </p>
         </div>
-        <p class="training-description">Training description</p>
-        <div class="training-price">
-          <p>€120 / person</p>
-          <p>€400 / group of 4</p>
-        </div>
-        <a href="#" class="btn secondary price-btn">Aliquam →</a>
       </div>
+    </section>
 
-      <div class="training-card">
-        <div class="training-header">
-          <p class="training-date">Online Training<br />NOV 15</p>
-          <h3>
-            Designing with users in mind:<br />personas, journeys & priorities
-          </h3>
+    <!-- STATS -->
+    <section class="stats bg-primary text-white">
+      <div class="container-fluid">
+        <div class="row g-0 text-center">
+          <div class="col py-5 px-4 border-end border-white border-opacity-25">
+            <h3 class="display-5 fw-bold mb-2">30 +</h3>
+            <div class="text-uppercase small letter-spacing-1 mb-2">Events</div>
+            <p class="mx-auto" style="max-width: 280px;">
+              Including talks, round tables and a full weekend Designathon
+            </p>
+          </div>
+          <div class="col py-5 px-4 border-end border-white border-opacity-25">
+            <h3 class="display-5 fw-bold mb-2">750 +</h3>
+            <div class="text-uppercase small letter-spacing-1 mb-2">Participants</div>
+            <p class="mx-auto" style="max-width: 280px">
+              A growing community of Designers, PMs, POs and curious minds from all backgrounds
+            </p>
+          </div>
+          <div class="col py-5 px-4">
+            <h3 class="display-5 fw-bold mb-2">50h +</h3>
+            <div class="text-uppercase small letter-spacing-1 mb-2">Networking</div>
+            <p class="mx-auto" style="max-width: 280px">
+              Bringing people together to learn, share and build meaningful connections
+            </p>
+          </div>
         </div>
-        <p class="training-description">
-          A practical training session focused on understanding users and
-          translating that into product impact. You'll learn how to build
-          actionable personas, uncover pain points through journey mapping, and
-          prioritise what really matters with a proven framework.
-        </p>
-        <div class="training-price">
-          <p>€60 / person</p>
-          <p>€200 / group of 4</p>
-        </div>
-        <a href="#" class="btn secondary price-btn">Blandit →</a>
       </div>
     </section>
-    <section class="workshops">
-      <div class="workshop-card">
-        <p class="wk-label">2H ONLINE WORKSHOP<br /><span>(DATE)</span></p>
-        <h3 class="wk-title">
-          UX & Agile: integração<br />em equipas de delivery<br />(AX Sprint
-          Canvas)
-        </h3>
-        <p class="wk-desc">
-          Neque vestibulum posuere sed semper porta eleifend aliquam. Consequat
-          sodales dolor est sed montes egestas malesuada velit. Felis cursus id
-          mus fermentum quam lacus praesent nisl rutrum col at dolor. Fusce
-          sodales erat.
-        </p>
-      </div>
 
-      <div class="workshop-card">
-        <p class="wk-label">2H ONLINE WORKSHOP<br /><span>(DATE)</span></p>
-        <h3 class="wk-title">
-          Inclusão, acessibilidade<br />e ética no design
-        </h3>
-        <p class="wk-desc">
-          Montes id enim curae purus donec tempus libero non magnis montes
-          tincidunt iaculis. Primis egestas dis urna nunc. Ante non condimentum
-          porttitor porta porttitor. Erat odio odio ut nullam etiam pharetra
-          consequat egestas tortor.
-        </p>
+    <!-- SERVICES SPLIT -->
+    <section id="services" class="container-fluid px-0 border-top">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex">
+          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
+            <small
+              class="text-uppercase orange"
+              style="letter-spacing: 0.3rem"
+              >Services</small
+            >
+            <h2 class="display-5 fw-semibold my-4">
+              UX Audit &<br />Light Consulting
+            </h2>
+            <p class="fst-italic mb-3">Quick insights. Real impact.</p>
+            <p class="fw-semibold">
+              A streamlined service for startups and product teams who want to
+              level up their user experience.
+            </p>
+            <p>
+              We’ll review your product using proven UX heuristics, highlight
+              key opportunities for improvement, and deliver clear, visual
+              feedback. No long-term commitment, just actionable insights you
+              can use right away.
+            </p>
+            <p class="mb-4">
+              <strong>What’s included:</strong><br />
+              – Heuristic review of your product<br />
+              – Visual report (Figma, PDF or Notion)<br />
+              – 1-hour feedback session with your team
+            </p>
+            <p class="mb-4">
+              Ideal for early-stage products, MVPs, or teams without a dedicated
+              UX role.
+            </p>
+            <a class="btn btn-secondary rounded-pill px-4 py-2" href="#"
+              >Let’s Talk</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <img
+            src="./images/service.png"
+            alt="Service visual"
+            class="img-fluid w-100 h-100 object-fit-cover d-block"
+          />
+        </div>
       </div>
     </section>
+
+    <!-- GROW -->
+    <section class="py-5 mt-4 mb-4">
+      <div class="container">
+        <div class="mx-auto text-center" style="max-width: 900px">
+          <h2 class="fw-semibold mb-4">Grow with us</h2>
+          <p class="text-justify">
+            <strong>Workshops</strong> and
+            <strong>training sessions</strong> outside working hours, designed
+            to help you grow your skills, confidence and impact, whether you’re
+            just starting out or levelling up.
+          </p>
+          <p class="text-justify">
+            We focus on practical tools, real-world challenges, and
+            collaborative learning. From research and writing to accessibility
+            and AI, we cover what matters in today’s UX practice.
+          </p>
+          <p class="text-justify mb-0">
+            Come learn with us, and bring that value back to your team, your
+            users, and your projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAININGS -->
+    <section id="learning" class="bg-primary text-white py-5 position-relative">
+      <div class="container">
+        <div class="row g-0 text-center">
+          <div class="col py-5 px-4">
+            <p class="text-uppercase small opacity-75 mb-1">Online Training</p>
+            <p class="small mb-3">Nov 15</p>
+            <h3 class="training-title fw-semibold text-uppercase mb-4">
+              Designing with users in mind:<br>personas, journeys & priorities
+            </h3>
+            <p class="mx-auto mb-4" style="max-width: 660px">
+              A practical training session focused on understanding users and
+              translating that into product impact. You'll learn how to build
+              actionable personas, uncover pain points through journey mapping,
+              and prioritise what really matters with a proven framework.
+            </p>
+            <p class="price-line mb-1">€60 / person</p>
+            <p class="price-line mb-4">€200 / group of 4</p>
+            <a class="btn btn-secondary rounded-pill px-4 py-2" href="#">
+              Enroll Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS -->
+    <section id="workshops" class="border-top border-bottom py-5 position-relative">
+      <div class="container-fluid px-0">
+        <div class="row row-cols-1 row-cols-lg-2 g-0 text-center position-relative align-items-stretch">
+          <div
+            class="d-none d-lg-block position-absolute top-0 bottom-0 start-50 border-start"
+            style="opacity:0.15; pointer-events:none;"
+          ></div>
+
+          <!-- Column 1 -->
+          <div class="col py-5 px-4 px-lg-5 workshop-col">
+            <div class="workshop-inner mx-auto" style="max-width:760px">
+              <p class="text-uppercase small orange mb-3 workshop-meta" style="letter-spacing:.35rem">
+                2H Online Workshop<br>
+                <span class="small" style="letter-spacing:.4rem">(Date)</span>
+              </p>
+              <h3 class="workshop-title fw-semibold mb-4">
+                UX & Agile: integração em equipas de delivery (AX Sprint Canvas)
+              </h3>
+              <p class="text-justify mb-0">
+                Neque vestibulum posuere sed semper porta eleifend aliquam. Consequat sodales dolor est sed montes egestas malesuada velit. Felis cursus id mus fermentum quam lacus praesent nisl rutrum col at dolor. Fusce sodales erat.
+              </p>
+              <a href="#" class="btn btn-secondary rounded-pill px-4 py-2 mt-4">I'm Interested</a>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col py-5 px-4 px-lg-5 workshop-col">
+            <div class="workshop-inner mx-auto" style="max-width:760px">
+              <p class="text-uppercase small orange mb-3 workshop-meta" style="letter-spacing:.35rem">
+                2H Online Workshop<br>
+                <span class="small" style="letter-spacing:.4rem">(Date)</span>
+              </p>
+              <h3 class="workshop-title fw-semibold mb-4">
+                Inclusão, acessibilidade e ética no design
+              </h3>
+              <p class="text-justify mb-0">
+                Montes id enim curae purus donec tempus libero non magnis montes tincidunt iaculis. Primis egestas dis urna nunc. Ante non condimentum porttitor porta porttitor. Erat odio odio ut nullam etiam pharetra consequat egestas tortor.
+              </p>
+              <a href="#" class="btn btn-secondary rounded-pill px-4 py-2 mt-4">I'm Interested</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap 5 (JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,460 +1,112 @@
+/* ===============================
+   Global / Utilities / Bootstrap overrides
+==================================*/
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'Instrument Sans', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #19191A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hero {
-  display: flex;
-  flex-wrap: wrap; /* Ensures it stacks on mobile */
-  min-height: 100vh; /* Optional: make it take up full screen height */
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.hero-image {
-  flex: 1 1 50%;
-}
-
-.hero-content {
-  flex: 1 1 50%;
-  display: flex;
-  padding: 5rem;
-  padding-top: 0;
-  justify-content: center;    /* Center horizontally */
-  align-items: center;        /* Center vertically */
-  box-sizing: border-box;
-  margin-top: 1rem;
-  border-bottom: 1px solid #D3D3D3;
-}
-
-.hero-text {
-  max-width: 100%;
-  padding: 1rem;
-} 
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 610;
-  line-height: 1.25;
-  margin-bottom: 2rem;
-  color: #212121;
+h1, h2, h3,
+.display-1, .display-2, .display-3, .display-4, .display-5 {
   font-family: 'Instrument Sans', sans-serif;
 }
 
-.hero-text p {
-  text-align: justify;
-  color: #19191A;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  line-height: 1.87;
-  margin-bottom: 1rem;
-}
+/* Utilities */
+.text-justify { text-align: justify; }
+.letter-spacing-1 { letter-spacing: .1rem; }
+.object-fit-cover { object-fit: cover; }
 
-.hero-buttons {
-  margin-top: 3.5rem;
-  font-family: 'Inter', sans-serif;
-}
+/* Theme buttons & colors (Bootstrap override) */
+.btn-primary { background: #1E5AA7; border-color: #1E5AA7; }
+.btn-primary:hover { background: #09499B; border-color: #09499B; }
+.bg-primary { background: #1E5AA7 !important; }
 
+.btn-secondary { background: #FFE4DD; border-color: #FFE4DD; color: #E4582D;}
+.btn-secondary:hover { background: #FDD1C5; border-color: #FDD1C5; } 
+
+/* Link buttons (non-Bootstrap buttons you use) */
 .btn {
   display: inline-block;
-  padding: 1rem 1.75rem;
-  width: auto;
+  padding: 0.95rem 1.6rem;
   text-decoration: none;
-  border-radius: 2.5rem;
-  margin-right: 1rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-  font-family: 'Inter', sans-serif;
-}
-
-.primary {
-  background-color: #1E5AA7;
-  color: #fff;
-}
-
-.primary:hover {
-  background-color: #09499B;
-}
-
-.secondary {
-  background-color: #EE765E2B;
-  color: #EE765E;
-}
-
-.secondary:hover {
-  background-color: #FFFFFFE8;
-}   
-
-.mission {
-  background-color: #fff;
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.mission .container {
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-.mission h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.3;
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 600;
-  color: #212121;
-}
-
-.mission p {
+  border-radius: 999px;
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: #19191A;
-  line-height: 1.87;
-  font-weight: 300;
+  font-weight: 500;
   font-family: 'Inter', sans-serif;
 }
 
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #1E5AA7;
-  color: #fff;
-  text-align: center;
+/* Slim navbar */
+.navbar {
+  --bs-navbar-padding-y: .35rem;      /* reduces vertical padding */
+  font-size: 0.95rem;
 }
+
+.navbar-brand {
+  padding: .25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  padding-top: .35rem;
+  padding-bottom: .35rem;
+}
+
+/* Optional: slightly smaller toggler */
+.navbar-toggler {
+  padding: .25rem .5rem;
+  font-size: .9rem;
+}
+
+/* ===============================
+   STATS (3 columns, blue band)
+==================================*/
 
 .stat {
   flex: 1 1 33%;
-  padding: 9rem 2rem;
+  padding: 6.5rem 2rem;             /* roomy vertical rhythm */
   box-sizing: border-box;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.stat:last-child {
-  border-right: none;
-}
+.stat:last-child { border-right: none; }
 
 .stat h3 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
   font-family: 'Instrument Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 2rem + 2vw, 3.5rem);
+  margin: 0 0 0.75rem;
 }
 
 .stat h4 {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  color: #fff;
   font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0 0 1.2rem 0;
   font-weight: 400;
 }
 
 .stat p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 280px;
-  margin: 0 auto;
-  color: #f1f1f1;
   font-family: 'Inter', sans-serif;
+  font-size: 0.995rem;
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 0 auto;
+  color: #F4F6FF;
   font-weight: 400;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .stat {
-    flex: 1 1 100%;
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.stats { padding: 0; }              /* add if you need zero vertical padding */
 
-  .stat:last-child {
-    border-bottom: none;
-  }
-
-  .stat h3 {
-    font-size: 3rem;
-  }
+.orange {
+  color:  #E4582D;
 }
 
-.service {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  background-color: #fff;
-  padding-top: 0.1rem;
-}
-
-.service-content {
-  flex: 1;
-  padding: 9rem 5rem;
-  max-width: 600px;
-  border-bottom: 1px solid #D3D3D3;
-}
-
-.service-content small {
-  text-transform: uppercase;
-  color: #EE765E; /* light red */
-  font-weight: 300;
-  font-size: 0.9rem;
-  letter-spacing: 0.3rem;
-  padding-bottom: 1rem;
-}
-
-.service-content h2 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin: 3rem 0;
-  font-weight: 610;
-  font-family: 'Instrument Sans', sans-serif;
-  color: #19191A;
-}
-
-.service-content .tagline {
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  color: #19191A;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-}
-
-.service-content p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #19191A;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-}
-
-.service-content .btn {
-  margin-top: 2rem;
-  background-color: #1E5AA7;
-  padding: 1rem 2.3rem;
-}
-
-.service-content .btn:hover {
-  margin-top: 2rem;
-  background-color: #09499B;
-}
-
-.service-image {
-  flex: 1;
-  max-height: 100%;
-  overflow: hidden;
-}
-
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .service {
-    flex-direction: column;
-  }
-
-  .service-content {
-    padding: 0 2rem 2rem;
-  }
-
-  .service-image {
-    order: -1;
-    height: 300px;
-  }
-}
-
-.grow {
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.grow-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.grow-content h2 {
-  font-size: 2.5rem;
-  font-weight: 610;
-  margin-bottom: 2rem;
-  font-family: 'Instrument Sans', sans-serif;
-  color: #212121;
-}
-
-.grow-content p {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-weight: 300;
-  font-family: 'Inter', sans-serif;
-}
-
-.grow-content strong {
-  font-weight: 600;
-}
-
-
-.trainings {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: center;              /* vertical centering inside each column */
-  background-color: #1E5AA7;
-  color: #fff;
-  padding: 2rem 2rem;
-  gap: 0;                           /* no gap; we’ll draw a divider */
-  text-align: center;
-}
-
-.trainings::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 50%;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.training-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;          /* center the block vertically */
-  padding: 4rem 2rem;
-}
-
-.training-card > * {
-  max-width: 560px;
-  width: 100%;
-}
-
-.training-card:first-child {
-  border-left: none;
-}
-
-.training-header {
-  margin-bottom: 1.5rem;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 1rem;
-}
-
-.training-header .training-date {
-  font-size: 0.9rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  opacity: 0.8;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.75rem;
-}
-
-.training-header h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.4;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  line-height: 1.75rem;
-}
-
-.training-description {
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 2rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-}
-
-.training-price {
-  font-weight: 610;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-family: 'Instrument Sans', sans-serif;
-  line-height: 1.125rem;
-}
-
-.price-btn {
-  width: auto;
-  background-color: #fff;
-}
-
-
-/* Workshops split section */
-.workshops {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  background: #fff;
-  padding: 6rem 2rem;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.workshops::after {
-  content: "";
-  position: absolute;
-  top: 8%;
-  bottom: 8%;
-  left: 50%;
-  width: 1px;
-  background: rgba(0,0,0,.08); /* subtle middle divider */
-}
-
-.workshop-card {
-  padding: 4.5rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.wk-label {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: .35rem;
-  text-transform: uppercase;
-  color: #ee765e;                 /* coral */
-  opacity: .95;
-  margin: 0 0 1.75rem;
-}
-
-.wk-title {
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 610;               /* bold like the reference */
-  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
-  line-height: 1.125;
-  color: #19191A;
-  margin: 0 0 2rem;
-}
-
-.wk-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #3a3a3a;
-  max-width: 680px;
-  margin: 0 auto;
-  font-weight: 300;
-}
-
-/* responsive */
-@media (max-width: 960px) {
-  .workshops {
-    grid-template-columns: 1fr;
-    padding: 4rem 1.5rem;
-  }
-  .workshops::after { display: none; }
-  .workshop-card { padding: 3rem 1rem; }
-  .wk-title { font-size: clamp(1.8rem, 3.5vw + 1rem, 2.6rem); }
-}
