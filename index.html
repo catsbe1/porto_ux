@@ -18,6 +18,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Social Icons (Bootstrap Icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
 
     <!-- Your custom CSS (optional, to tweak colors/spacing/typography) -->
     <link rel="stylesheet" href="style.css" />
@@ -25,12 +30,21 @@
 
   <body>
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
       <div class="container-fluid">
-        <!-- Logo / Brand -->
+        <!-- Logo / Brand + Social -->
         <a class="navbar-brand" href="#">Porto UX</a>
+        <div class="d-none d-lg-flex align-items-center ms-3 gap-3">
+          <a href="#" class="text-decoration-none text-dark" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-decoration-none text-dark" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-decoration-none text-dark" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
 
         <!-- Mobile toggle -->
         <button
@@ -48,14 +62,21 @@
         <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            <!-- Training -->
             <li class="nav-item">
-              <a class="nav-link active" href="#services">Services</a>
+              <a class="nav-link active" href="#learning">Training</a>
             </li>
+            <!-- Services -->
             <li class="nav-item">
-              <a class="nav-link" href="#learning">Learning</a>
+              <a class="nav-link" href="#services">Services</a>
             </li>
+            <!-- Events -->
             <li class="nav-item">
-              <a class="nav-link" href="#workshops">Workshops</a>
+              <a class="nav-link" href="#events">Events</a>
+            </li>
+            <!-- About Us -->
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
             </li>
           </ul>
         </div>
@@ -89,7 +110,6 @@
             <h1 class="display-5 fw-semibold mb-4">
               Human-centred<br />Business-minded<br />Community-powered
             </h1>
-
             <p class="text-justify mb-3">
               Porto UX is an open, inclusive community born in Porto but open to
               everyone, everywhere. We bring together people who care about UX,
@@ -105,24 +125,18 @@
               Our goal is to inspire people to build digital products with users
               in mind, always focused on making a positive impact.
             </p>
-
-            <div class="d-flex gap-3 flex-wrap mt-5">
-              <a href="#services" class="btn btn-primary rounded-pill px-4 py-2"
-                >Services</a
-              >
-              <a
-                href="#learning"
-                class="btn btn-secondary rounded-pill px-4 py-2"
-                >Learning</a
-              >
-            </div>
+            <h3 class="mt-5">
+              <a href="#learning" class="text-decoration-none" style="color:#1E5AA7;">
+                Your growth journey starts here
+              </a>
+            </h3>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- MISSION -->
-    <section class="py-5 py-xl-6 mt-4 mb-4">
+    <!-- MISSION becomes About Us -->
+    <section id="mission" class="py-5 py-xl-6 mt-4 mb-4">
       <div class="container">
         <div class="mx-auto text-center" style="max-width: 760px">
           <h2 class="fw-semibold mb-4">
@@ -138,6 +152,7 @@
             users and for business. By sharing tools, methods and best
             practices, we help create better products and real impact.
           </p>
+          <!-- Removed growth journey link here -->
         </div>
       </div>
     </section>
@@ -171,59 +186,11 @@
       </div>
     </section>
 
-    <!-- SERVICES SPLIT -->
-    <section id="services" class="container-fluid px-0 border-top">
-      <div class="row g-0">
-        <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex">
-          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
-            <small
-              class="text-uppercase orange"
-              style="letter-spacing: 0.3rem"
-              >Services</small
-            >
-            <h2 class="display-5 fw-semibold my-4">
-              UX Audit &<br />Light Consulting
-            </h2>
-            <p class="fst-italic mb-3">Quick insights. Real impact.</p>
-            <p class="fw-semibold">
-              A streamlined service for startups and product teams who want to
-              level up their user experience.
-            </p>
-            <p>
-              We’ll review your product using proven UX heuristics, highlight
-              key opportunities for improvement, and deliver clear, visual
-              feedback. No long-term commitment, just actionable insights you
-              can use right away.
-            </p>
-            <p class="mb-4">
-              <strong>What’s included:</strong><br />
-              – Heuristic review of your product<br />
-              – Visual report (Figma, PDF or Notion)<br />
-              – 1-hour feedback session with your team
-            </p>
-            <p class="mb-4">
-              Ideal for early-stage products, MVPs, or teams without a dedicated
-              UX role.
-            </p>
-            <a class="btn btn-secondary rounded-pill px-4 py-2" href="#"
-              >Let’s Talk</a
-            >
-          </div>
-        </div>
-        <div class="col-12 col-lg-6 order-1 order-lg-2">
-          <img
-            src="./images/service.png"
-            alt="Service visual"
-            class="img-fluid w-100 h-100 object-fit-cover d-block"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- GROW -->
-    <section class="py-5 mt-4 mb-4">
+    <section id="grow" class="py-5 mt-4 mb-4">
       <div class="container">
         <div class="mx-auto text-center" style="max-width: 900px">
+          <small class="text-uppercase orange d-block mb-3" style="letter-spacing:0.3rem;">TRAINING</small>
           <h2 class="fw-semibold mb-4">Grow with us</h2>
           <p class="text-justify">
             <strong>Workshops</strong> and
@@ -245,7 +212,7 @@
     </section>
 
     <!-- TRAININGS -->
-    <section id="learning" class="bg-primary text-white py-5 position-relative">
+    <section id="learning" class="bg-primary text-white py-5 position-relative border-top">
       <div class="container">
         <div class="row g-0 text-center">
           <div class="col py-5 px-4">
@@ -254,27 +221,21 @@
             <h3 class="training-title fw-semibold text-uppercase mb-4">
               Designing with users in mind:<br>personas, journeys & priorities
             </h3>
-            <p class="mx-auto mb-4" style="max-width: 660px">
-              A practical training session focused on understanding users and
-              translating that into product impact. You'll learn how to build
-              actionable personas, uncover pain points through journey mapping,
-              and prioritise what really matters with a proven framework.
-            </p>
-            <p class="price-line mb-1">€60 / person</p>
-            <p class="price-line mb-4">€200 / group of 4</p>
+            <!-- Removed in-section long description & prices -->
             <a class="btn btn-secondary rounded-pill px-4 py-2"
                href="#"
                data-bs-toggle="modal"
                data-bs-target="#enrollModal"
-               data-workshop="Designing with users in mind: personas, journeys & priorities">
-              Enroll Now
+               data-workshop="Designing with users in mind: personas, journeys & priorities"
+               data-desc="A practical training session focused on understanding users and translating that into product impact. You'll learn how to build actionable personas, uncover pain points through journey mapping, and prioritise what really matters with a proven framework.\n\nPrices:\n– €60 / person\n– €200 / group of 4">
+              Know More & Enroll
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WORKSHOPS -->
+    <!-- WORKSHOPS (moved here, now before Grow) -->
     <section id="workshops" class="border-top border-bottom py-5 position-relative">
       <div class="container-fluid px-0">
         <div class="row row-cols-1 row-cols-lg-2 g-0 text-center position-relative align-items-stretch">
@@ -288,20 +249,21 @@
             <div class="workshop-inner mx-auto" style="max-width:760px">
               <p class="text-uppercase small orange mb-3 workshop-meta" style="letter-spacing:.35rem">
                 2H Online Workshop<br>
-                <span class="small" style="letter-spacing:.4rem">(Date)</span>
+                <span class="small" style="letter-spacing:.4rem">(Date TBD)</span>
               </p>
               <h3 class="workshop-title fw-semibold mb-4">
-                UX & Agile: integração em equipas de delivery (AX Sprint Canvas)
+                UX & Agile: Integrating in Delivery Teams with the AX Sprint Canvas
               </h3>
-              <p class="text-justify mb-0">
-                Neque vestibulum posuere sed semper porta eleifend aliquam. Consequat sodales dolor est sed montes egestas malesuada velit. Felis cursus id mus fermentum quam lacus praesent nisl rutrum col at dolor. Fusce sodales erat.
-              </p>
+                <p class="text-justify mb-0">
+                  Tired of UX being sidelined in Agile sprints? And what about AI first projects?
+                </p>
               <a href="#"
                  class="btn btn-secondary rounded-pill px-4 py-2 mt-4"
                  data-bs-toggle="modal"
                  data-bs-target="#enrollModal"
-                 data-workshop="UX & Agile: integração em equipas de delivery (AX Sprint Canvas)">
-                I'm Interested
+                 data-workshop="UX & Agile: Integrating in Delivery Teams with the AX Sprint Canvas"
+                 data-desc="In this hands-on session, you’ll learn how to use and why it matters: the AX Sprint Canvas to plan, align, and embed UX and ethical design into real delivery workflows.\nFrom trust and explainability to fallback design and collaboration, this canvas helps your team turn UX work into sprint-ready actions.\nLet’s bring UX (and AX) back into the core of Agile.">
+                Know More & Enroll
               </a>
             </div>
           </div>
@@ -311,24 +273,153 @@
             <div class="workshop-inner mx-auto" style="max-width:760px">
               <p class="text-uppercase small orange mb-3 workshop-meta" style="letter-spacing:.35rem">
                 2H Online Workshop<br>
-                <span class="small" style="letter-spacing:.4rem">(Date)</span>
+                <span class="small" style="letter-spacing:.4rem">(Date TBD)</span>
               </p>
               <h3 class="workshop-title fw-semibold mb-4">
-                Inclusão, acessibilidade e ética no design
+                Inclusion, Accessibility & Ethics in Design
               </h3>
               <p class="text-justify mb-0">
-                Montes id enim curae purus donec tempus libero non magnis montes tincidunt iaculis. Primis egestas dis urna nunc. Ante non condimentum porttitor porta porttitor. Erat odio odio ut nullam etiam pharetra consequat egestas tortor.
+                Designing for everyone is not a nice-to-have, it’s a responsibility.
               </p>
               <a href="#"
                  class="btn btn-secondary rounded-pill px-4 py-2 mt-4"
                  data-bs-toggle="modal"
                  data-bs-target="#enrollModal"
-                 data-workshop="Inclusão, acessibilidade e ética no design">
-                I'm Interested
+                 data-workshop="Inclusion, Accessibility & Ethics in Design"
+                 data-desc="In this session, we’ll explore how inclusive and accessible design choices shape real lives, and why ethics can’t be an afterthought. From WCAG principles to cognitive diversity and AI fairness, we’ll dive into practical ways to design with care, awareness, and impact.\n\nIdeal for UXers, devs, and teams building products that truly serve humans.\nLet’s rethink what “designing for all” really means.">
+                Know More & Enroll
               </a>
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container-fluid px-0 border-top">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex">
+          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
+            <small class="text-uppercase orange" style="letter-spacing:0.3rem">Services</small>
+            <h2 class="display-5 fw-semibold my-4">
+              UX Audit &<br>Light Consulting
+            </h2>
+            <p class="fst-italic mb-3">Quick insights. Real impact.</p>
+            <p class="fw-semibold">
+              A streamlined service for startups and product teams who want to
+              level up their user experience.
+            </p>
+            <!-- SERVICES button (add data-desc) -->
+            <a class="btn btn-primary rounded-pill px-4 py-2 mt-4"
+               href="#"
+               data-bs-toggle="modal"
+               data-bs-target="#enrollModal"
+               data-workshop="Services Inquiry: UX Audit & Light Consulting"
+               data-desc="We’ll review your product using proven UX heuristics, highlight key opportunities for improvement, and deliver clear, visual feedback. No long-term commitment, just actionable insights you can use right away.\n\nWhat’s included:\n– Heuristic review of your product\n– Visual report (Figma, PDF or Notion)\n– 1-hour feedback session with your team\n\nIdeal for early-stage products, MVPs, or teams without a dedicated UX role.">
+              Let’s Talk
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <img
+            src="./images/service.png"
+            alt="Service visual"
+            class="img-fluid w-100 h-100 object-fit-cover d-block">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (duplicate with image on the left) -->
+    <section id="events" class="container-fluid px-0 border-top">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6">
+          <img
+            src="./images/event.jpeg"
+            alt="Service visual"
+            class="img-fluid w-100 h-100 object-fit-cover d-block">
+        </div>
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
+            <small class="text-uppercase orange" style="letter-spacing:0.3rem">Previous Event</small>
+            <h2 class="display-5 fw-semibold my-4">"See" With the Heart</h2>
+            <p class="fmb-3">At Porto UX and Porto Tech Hub’s special accessibility event, participants were blindfolded and guided by Cláudia Barbosa - athlete, nutritionist, and an inspiring force of resilience after losing her sight less than a year ago. <br /> <br />Together, we experienced what it means to navigate the world without vision, reflected on real barriers in digital and physical interfaces, and explored why accessibility, and WCAG, must be at the heart of our design decisions.
+
+Design is not just what we see, it’s what we allow others to experience.</p>
+            <p class="fw-semibold">
+              Thank you to everyone who joined us on this unforgettable journey of empathy and inclusion.
+            </p>
+            <a class="btn btn-primary rounded-pill px-4 py-2 mt-2"
+               href="https://www.eventbrite.com/e/bilhetes-ver-com-o-coracao-1657714882839?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+               target="_blank"
+               rel="noopener"
+               data-workshop="Previous Events Inquiry"
+               data-desc="Share your interest in past event formats or request details about upcoming editions.">
+              Know More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTO UX MENTORSHIP (duplicated Grow section) -->
+    <section id="about" class="py-5 mt-4 mb-4">
+      <div class="container">
+        <div class="mx-auto text-center" style="max-width: 900px">
+          <small class="text-uppercase orange d-block mb-3" style="letter-spacing:0.3rem;">About Us</small>
+          <h2 class="fw-semibold mb-4">Porto UX Mentorship</h2>
+          <p class="text-justify mb-0">
+            “It was a learning experience that gave me the confidence I needed to move forward in my journey as a UX/UI Designer.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (duplicate after Mentorship) -->
+    <section id="services-3" class="container-fluid px-0 border-top">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex">
+          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
+            <small class="text-uppercase orange" style="letter-spacing:0.3rem">Behind Porto UX</small>
+            <h2 class="display-5 fw-semibold my-4">Marta Fernandez</h2>
+
+            <p>Marta Fernandez is the co-founder of PortoUX, a designer-led community that has been bringing UX professionals together since 2017. What began as a local meetup has grown into one of Portugal’s most active and engaged UX communities, a space for reflection, sharing, and evolving design practice.</p>
+            <p>With over 20 years of experience in UX, research, and strategy, Marta’s work explores how design can shape more meaningful, inclusive, and intelligent systems. She’s especially interested in the role of AI in design, and how technology can support clarity, care, and ethical decision-making.</p>
+            <p>Beyond her community work, Marta writes regularly about design, inclusion, and responsible innovation — including her ongoing Medium series, “Designing AI with Care”.</p>
+            <p>She created PortoUX with the belief that design grows stronger when we learn together, challenge assumptions, and stay close to what really matters: people.</p>
+
+            <!-- button removed -->
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <img
+            src="./images/marta.jpeg"
+            alt="Marta Fernandez"
+            class="img-fluid w-100 h-100 object-fit-cover d-block">
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIOUS EVENT (duplicate after Mentorship) -->
+    <section id="events-2" class="container-fluid px-0 border-top">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6">
+          <img
+            src="./images/xana.jpeg"
+            alt="Alexandra Rocha"
+            class="img-fluid w-100 h-100 object-fit-cover d-block">
+        </div>
+        <div class="col-12 col-lg-6 d-flex">
+          <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
+            <small class="text-uppercase orange" style="letter-spacing:0.3rem">Behind Porto UX</small>
+            <h2 class="display-5 fw-semibold my-4">Alexandra Rocha</h2>
+
+            <p>Alexandra Rocha is a Digital Product Designer with 20+ years of experience, passionate about creating solutions for complex challenges. She believes user-centered design is the key to improving people’s lives and helping businesses succeed.</p>
+            <p>Alongside her design work, Alexandra has been mentoring UX professionals for years, supporting their growth while learning just as much from the experience. Since 2018, she has also been a board member of PortoUX, where she helps plan talks, workshops, and mentoring programs with the aim of fostering growth and bringing people together.</p>
+            <p>This year, she began sharing her thoughts on Medium, starting with her reflections on “10 Principles to Keep UCD Alive in Fast-Paced Teams”, with the goal of making user-centered design more practical, impactful, and human.</p>
+
+            <!-- Button removed -->
+          </div>
         </div>
       </div>
     </section>
@@ -342,24 +433,67 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body pt-3">
-            <form id="enrollForm">
+            <!-- Added description div -->
+            <div id="enrollDescription" class="mb-4 small text-muted"></div>
+
+            <form
+              id="enrollForm"
+              name="enroll"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <!-- Netlify required hidden fields -->
+              <input type="hidden" name="form-name" value="enroll" />
+              <input type="hidden" name="workshop" id="enrollContext" />
+              <p class="d-none">
+                <label>Don’t fill this out:
+                  <input name="bot-field" type="text" />
+                </label>
+              </p>
+
               <div class="mb-3">
                 <label class="form-label small text-uppercase mb-1">Name</label>
-                <input type="text" class="form-control" required />
+                <input type="text" name="name" class="form-control" required />
               </div>
+
               <div class="mb-4">
                 <label class="form-label small text-uppercase mb-1">Email</label>
-                <input type="email" class="form-control" required />
+                <input type="email" name="email" class="form-control" required />
               </div>
+
               <div class="d-flex gap-2">
-                <button type="submit" class="btn btn-primary rounded-pill px-4">Send</button>
-                <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                <button id="enrollSubmit" type="submit" class="btn btn-primary rounded-pill px-4">
+                  Enroll
+                </button>
+                <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">
+                  Cancel
+                </button>
               </div>
             </form>
+
+            <!-- Success state (hidden initially) -->
+            <div id="enrollSuccess" class="d-none">
+              <h6 class="fw-semibold mb-3">Thank you!</h6>
+              <p class="mb-3 small">
+                Your enrollment has been received. We’ll get back to you soon.
+              </p>
+              <button type="button" class="btn btn-primary rounded-pill px-4" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Hidden reference form for Netlify build detection -->
+    <form name="enroll" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="workshop" />
+      <input type="hidden" name="form-name" value="enroll" />
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
