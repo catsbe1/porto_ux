@@ -31,24 +31,13 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-      <div class="container-fluid">
-        <!-- Logo / Brand + Social -->
-        <a class="navbar-brand" href="#">Porto UX</a>
-        <div class="d-none d-lg-flex align-items-center ms-3 gap-3">
-          <a href="#" class="text-decoration-none text-dark" aria-label="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="text-decoration-none text-dark" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="#" class="text-decoration-none text-dark" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-        </div>
+      <div class="container-fluid d-flex align-items-center">
+        <!-- Brand (left) -->
+        <a class="navbar-brand order-lg-1" href="#">Porto UX</a>
 
-        <!-- Mobile toggle -->
+        <!-- Toggler (still near left on mobile) -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ms-auto order-lg-3"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -59,26 +48,37 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <!-- Training -->
-            <li class="nav-item">
-              <a class="nav-link active" href="#learning">Training</a>
-            </li>
-            <!-- Services -->
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <!-- Events -->
-            <li class="nav-item">
-              <a class="nav-link" href="#events">Events</a>
-            </li>
-            <!-- About Us -->
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
-            </li>
+        <!-- Centered Nav -->
+        <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#learning">Training</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
           </ul>
+        </div>
+
+        <!-- Social (right) -->
+        <div class="d-none d-lg-flex align-items-center gap-3 ms-lg-3 order-lg-3 social-nav">
+          <a href="https://www.instagram.com/porto.ux?igsh=aTM5dHR2ZWpqb2Nh&utm_source=qr"
+             class="text-decoration-none text-dark"
+             target="_blank"
+             rel="noopener"
+             aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/porto-ux/"
+             class="text-decoration-none text-dark"
+             target="_blank"
+             rel="noopener"
+             aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:portoux@portoux.com"
+             class="text-decoration-none text-dark"
+             aria-label="Email">
+            <i class="bi bi-envelope-at"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -134,28 +134,6 @@
         </div>
       </div>
     </header>
-
-    <!-- MISSION becomes About Us -->
-    <section id="mission" class="py-5 py-xl-6 mt-4 mb-4">
-      <div class="container">
-        <div class="mx-auto text-center" style="max-width: 760px">
-          <h2 class="fw-semibold mb-4">
-            Designing with purpose,<br />growing with community
-          </h2>
-          <p class="text-justify mb-3">
-            Since 2016, we’ve been bringing people together to share ideas,
-            stories, and inspiration, from hands-on professionals to curious
-            newcomers.
-          </p>
-          <p class="text-justify">
-            We believe in people. We believe good design makes a difference; for
-            users and for business. By sharing tools, methods and best
-            practices, we help create better products and real impact.
-          </p>
-          <!-- Removed growth journey link here -->
-        </div>
-      </div>
-    </section>
 
     <!-- STATS -->
     <section class="stats bg-primary text-white">
@@ -362,14 +340,23 @@ Design is not just what we see, it’s what we allow others to experience.</p>
       </div>
     </section>
 
-    <!-- PORTO UX MENTORSHIP (duplicated Grow section) -->
-    <section id="about" class="py-5 mt-4 mb-4">
+    <!-- ABOUT (replaced first mentorship block) -->
+    <section id="about" class="py-5 mt-4 mb-4 ">
       <div class="container">
-        <div class="mx-auto text-center" style="max-width: 900px">
+        <div class="mx-auto text-center" style="max-width:760px">
           <small class="text-uppercase orange d-block mb-3" style="letter-spacing:0.3rem;">About Us</small>
-          <h2 class="fw-semibold mb-4">Porto UX Mentorship</h2>
+          <h2 class="fw-semibold mb-4">
+            Designing with purpose,<br />growing with community
+          </h2>
+          <p class="text-justify mb-3">
+            Since 2016, we’ve been bringing people together to share ideas,
+            stories, and inspiration, from hands-on professionals to curious
+            newcomers.
+          </p>
           <p class="text-justify mb-0">
-            “It was a learning experience that gave me the confidence I needed to move forward in my journey as a UX/UI Designer.”
+            We believe in people. We believe good design makes a difference; for
+            users and for business. By sharing tools, methods and best
+            practices, we help create better products and real impact.
           </p>
         </div>
       </div>
@@ -388,6 +375,20 @@ Design is not just what we see, it’s what we allow others to experience.</p>
             <p>Beyond her community work, Marta writes regularly about design, inclusion, and responsible innovation — including her ongoing Medium series, “Designing AI with Care”.</p>
             <p>She created PortoUX with the belief that design grows stronger when we learn together, challenge assumptions, and stay close to what really matters: people.</p>
 
+            <div class="bio-social d-flex gap-3 mt-3">
+              <a href="https://pt.linkedin.com/in/martalfernandez"
+                 class="social-ball-blue"
+                 aria-label="LinkedIn"
+                 target="_blank"
+                 rel="noopener">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="mailto:marta.fernandez@portoux.com"
+                 class="social-ball-blue"
+                 aria-label="Email">
+                <i class="bi bi-envelope-at"></i>
+              </a>
+            </div>
             <!-- button removed -->
           </div>
         </div>
@@ -418,8 +419,35 @@ Design is not just what we see, it’s what we allow others to experience.</p>
             <p>Alongside her design work, Alexandra has been mentoring UX professionals for years, supporting their growth while learning just as much from the experience. Since 2018, she has also been a board member of PortoUX, where she helps plan talks, workshops, and mentoring programs with the aim of fostering growth and bringing people together.</p>
             <p>This year, she began sharing her thoughts on Medium, starting with her reflections on “10 Principles to Keep UCD Alive in Fast-Paced Teams”, with the goal of making user-centered design more practical, impactful, and human.</p>
 
+            <div class="bio-social d-flex gap-3 mt-3">
+              <a href="https://pt.linkedin.com/in/alexandra-rocha-09847a14"
+                 class="social-ball-blue"
+                 aria-label="LinkedIn"
+                 target="_blank"
+                 rel="noopener">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="mailto:alexandra.rocha@portoux.com"
+                 class="social-ball-blue"
+                 aria-label="Email">
+                <i class="bi bi-envelope-at"></i>
+              </a>
+            </div>
             <!-- Button removed -->
           </div>
+        </div>
+      </div>
+    </section> <!-- end of #events-2 (Alexandra Rocha) -->
+
+    <!-- PORTO UX MENTORSHIP (moved here after bios) -->
+    <section id="about" class="py-5 mt-4 mb-5 border-bottom">
+      <div class="container">
+        <div class="mx-auto text-center" style="max-width: 900px">
+          <small class="text-uppercase orange d-block mb-3" style="letter-spacing:0.3rem;">About Us</small>
+            <h2 class="fw-semibold mb-4">Porto UX Mentorship</h2>
+            <p class="text-justify mb-0">
+              “It was a learning experience that gave me the confidence I needed to move forward in my journey as a UX/UI Designer.”
+            </p>
         </div>
       </div>
     </section>
@@ -494,6 +522,33 @@ Design is not just what we see, it’s what we allow others to experience.</p>
       <input type="text" name="workshop" />
       <input type="hidden" name="form-name" value="enroll" />
     </form>
+
+    <footer class="site-footer py-1">
+      <div class="container text-center">
+        <div class="footer-social d-flex justify-content-center gap-4 mb-4">
+          <a href="https://www.instagram.com/porto.ux?igsh=aTM5dHR2ZWpqb2Nh&utm_source=qr"
+             class="social-ball"
+             aria-label="Instagram"
+             target="_blank"
+             rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/porto-ux/"
+             class="social-ball"
+             aria-label="LinkedIn"
+             target="_blank"
+             rel="noopener">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:portoux@portoux.com"
+             class="social-ball"
+             aria-label="Email">
+            <i class="bi bi-envelope-at"></i>
+          </a>
+        </div>
+        <small class="text-muted">&copy; 2025 Porto UX</small>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

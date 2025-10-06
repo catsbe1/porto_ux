@@ -110,3 +110,60 @@ h1, h2, h3,
   color:  #E4582D;
 }
 
+/* Footer social “balls” */
+.social-ball {
+  width: 37px;
+  height: 37px;
+  background: #E4582D;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: background .25s, transform .25s, box-shadow .25s;
+  box-shadow: 0 4px 10px rgba(255,122,0,.35);
+}
+
+.social-ball:hover,
+.social-ball:focus {
+  background: #ff8f26;
+  transform: translateY(-4px) rotate(-5deg);
+  box-shadow: 0 6px 14px rgba(255,122,0,.5);
+}
+
+.social-ball:focus-visible {
+  outline: 3px solid #1E5AA7;
+  outline-offset: 4px;
+}
+
+.site-footer {
+  background: #fff;
+}
+
+.social-ball-blue {
+  width: 37px;
+  height: 37px;
+  background: #1E5AA7;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: background .25s, transform .25s, box-shadow .25s;
+  box-shadow: 0 3px 8px rgba(30,90,167,.35);
+}
+.social-ball-blue:hover,
+.social-ball-blue:focus {
+  background: #2371c7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(30,90,167,.45);
+}
+.social-ball-blue:focus-visible {
+  outline: 3px solid #ff7a00;
+  outline-offset: 4px;
+}
+
