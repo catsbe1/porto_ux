@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modalEl) {
     modalEl.addEventListener('show.bs.modal', ev => {
       const trigger = ev.relatedTarget;
-      const w = trigger && trigger.getAttribute('data-workshop');
+      let titleText = trigger && trigger.getAttribute('data-workshop');
       const d = trigger && trigger.getAttribute('data-desc');
-      if (titleEl) titleEl.textContent = w ? 'Enroll: ' + w : 'Enroll';
-      if (contextInput) contextInput.value = w || '';
+      if (titleEl) titleEl.textContent = titleText || '';
+      if (contextInput) contextInput.value = titleText || '';
       if (descEl) descEl.innerHTML = d ? formatDesc(d) : '';
     });
   }
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (form) form.classList.remove('d-none');
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Enroll';
+        submitBtn.textContent = 'Send';
       }
       form && form.reset();
     });

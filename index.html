@@ -194,8 +194,8 @@
       <div class="container">
         <div class="row g-0 text-center">
           <div class="col py-5 px-4">
-            <p class="text-uppercase small opacity-75 mb-1">Online Training</p>
-            <p class="small mb-3">Nov 15</p>
+            <p class="text-uppercase small opacity-75 mb-1">3H Online Training</p>
+            <p class="small mb-3">FEB 2026</p>
             <h3 class="training-title fw-semibold text-uppercase mb-4">
               Designing with users in mind:<br>personas, journeys & priorities
             </h3>
@@ -254,17 +254,17 @@
                 <span class="small" style="letter-spacing:.4rem">(Date TBD)</span>
               </p>
               <h3 class="workshop-title fw-semibold mb-4">
-                Inclusion, Accessibility & Ethics in Design
+                AX: Reverse Prompting - No Code
               </h3>
-              <p class="text-justify mb-0">
-                Designing for everyone is not a nice-to-have, it’s a responsibility.
+              <p class="text-center mb-0">
+                Learn to read AI backwards.
               </p>
               <a href="#"
                  class="btn btn-secondary rounded-pill px-4 py-2 mt-4"
                  data-bs-toggle="modal"
                  data-bs-target="#enrollModal"
-                 data-workshop="Inclusion, Accessibility & Ethics in Design"
-                 data-desc="In this session, we’ll explore how inclusive and accessible design choices shape real lives, and why ethics can’t be an afterthought. From WCAG principles to cognitive diversity and AI fairness, we’ll dive into practical ways to design with care, awareness, and impact.\n\nIdeal for UXers, devs, and teams building products that truly serve humans.\nLet’s rethink what “designing for all” really means.">
+                 data-workshop="AX: Reverse Prompting - No Code"
+                 data-desc="In this practical session, discover how to interpret AI outputs, uncover the hidden prompt behind them, and refine communication for smarter, more ethical, and human-centered results, all without code.">
                 Know More & Enroll
               </a>
             </div>
@@ -275,7 +275,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="container-fluid px-0 border-top">
+    <section id="services" class="container-fluid px-0">
       <div class="row g-0">
         <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex">
           <div class="p-4 p-xl-5 my-4 my-lg-0 w-100 border-bottom">
@@ -293,7 +293,7 @@
                href="#"
                data-bs-toggle="modal"
                data-bs-target="#enrollModal"
-               data-workshop="Services Inquiry: UX Audit & Light Consulting"
+               data-workshop="UX Audit & Light Consulting"
                data-desc="We’ll review your product using proven UX heuristics, highlight key opportunities for improvement, and deliver clear, visual feedback. No long-term commitment, just actionable insights you can use right away.\n\nWhat’s included:\n– Heuristic review of your product\n– Visual report (Figma, PDF or Notion)\n– 1-hour feedback session with your team\n\nIdeal for early-stage products, MVPs, or teams without a dedicated UX role.">
               Let’s Talk
             </a>
@@ -375,7 +375,7 @@ Design is not just what we see, it’s what we allow others to experience.</p>
             <p>Beyond her community work, Marta writes regularly about design, inclusion, and responsible innovation — including her ongoing Medium series, “Designing AI with Care”.</p>
             <p>She created PortoUX with the belief that design grows stronger when we learn together, challenge assumptions, and stay close to what really matters: people.</p>
 
-            <div class="bio-social d-flex gap-3 mt-3">
+            <div class="bio-social d-flex gap-3 mt-5">
               <a href="https://pt.linkedin.com/in/martalfernandez"
                  class="social-ball-blue"
                  aria-label="LinkedIn"
@@ -419,7 +419,7 @@ Design is not just what we see, it’s what we allow others to experience.</p>
             <p>Alongside her design work, Alexandra has been mentoring UX professionals for years, supporting their growth while learning just as much from the experience. Since 2018, she has also been a board member of PortoUX, where she helps plan talks, workshops, and mentoring programs with the aim of fostering growth and bringing people together.</p>
             <p>This year, she began sharing her thoughts on Medium, starting with her reflections on “10 Principles to Keep UCD Alive in Fast-Paced Teams”, with the goal of making user-centered design more practical, impactful, and human.</p>
 
-            <div class="bio-social d-flex gap-3 mt-3">
+            <div class="bio-social d-flex gap-3 mt-5">
               <a href="https://pt.linkedin.com/in/alexandra-rocha-09847a14"
                  class="social-ball-blue"
                  aria-label="LinkedIn"
@@ -457,7 +457,7 @@ Design is not just what we see, it’s what we allow others to experience.</p>
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-sm">
           <div class="modal-header border-0 pb-0">
-            <h5 class="modal-title fw-semibold" id="enrollModalLabel">Enroll</h5>
+            <h5 class="modal-title fw-semibold" id="enrollModalLabel"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body pt-3">
@@ -490,12 +490,16 @@ Design is not just what we see, it’s what we allow others to experience.</p>
                 <input type="email" name="email" class="form-control" required />
               </div>
 
-              <div class="d-flex gap-2">
-                <button id="enrollSubmit" type="submit" class="btn btn-primary rounded-pill px-4">
-                  Enroll
-                </button>
-                <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">
+              <div class="d-flex gap-2 align-items-center">
+                <button type="button"
+                        class="btn btn-outline-secondary rounded-pill px-4"
+                        data-bs-dismiss="modal">
                   Cancel
+                </button>
+                <button id="enrollSubmit"
+                        type="submit"
+                        class="btn btn-primary rounded-pill px-4">
+                  Send
                 </button>
               </div>
             </form>
